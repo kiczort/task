@@ -2,11 +2,13 @@
 
 namespace Task;
 
+use Pimple\Container;
+
 class Injector
 {
     protected $container;
 
-    public function __construct(\Pimple $container)
+    public function __construct(Container $container)
     {
         $this->container = $container;
     }

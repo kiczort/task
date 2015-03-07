@@ -25,7 +25,7 @@ class ProjectSpec extends ObjectBehavior
 
     function it_should_have_a_container()
     {
-        $this->getContainer()->shouldBeAnInstanceOf('Pimple');
+        $this->getContainer()->shouldBeAnInstanceOf('Pimple\Container');
     }
 
     function it_should_inject_a_container()

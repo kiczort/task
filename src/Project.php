@@ -2,6 +2,7 @@
 
 namespace Task;
 
+use Pimple\Container;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputDefinition;
@@ -53,7 +54,7 @@ class Project extends Application
     public function getContainer()
     {
         if (!$this->container) {
-            $this->container = new \Pimple;
+            $this->container = new Container;
         }
 
         return $this->container;

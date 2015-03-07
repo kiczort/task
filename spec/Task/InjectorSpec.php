@@ -3,11 +3,12 @@
 namespace spec\Task;
 
 use PhpSpec\ObjectBehavior;
+use Pimple\Container;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class InjectorSpec extends ObjectBehavior
 {
-    function let(\Pimple $container)
+    function let(Container $container)
     {
         $this->beConstructedWith($container);
     }
@@ -19,7 +20,7 @@ class InjectorSpec extends ObjectBehavior
 
     function it_should_call_function_with_services(OutputInterface $output)
     {
-        $container = new \Pimple([
+        $container = new Container([
             'foo' => 'baz',
             'bar' => 'wow'
         ]);
